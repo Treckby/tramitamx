@@ -1,15 +1,49 @@
 import {
-  Hero,
-  Categories,
-  PopularProcedures,
+  HeroSearch,
+  PopularTramites,
+  CategoryList,
 } from "@/app/components/features/home";
 
-export default function Home() {
+
+import {
+  getTramites,
+} from "@/app/services/tramites";
+
+
+import {
+  getCategorias,
+} from "@/app/services/categorias";
+
+
+
+export default function HomePage() {
+
+
+  const tramites = getTramites();
+
+  const categorias = getCategorias();
+
+
+
   return (
-    <>
-      <Hero />
-      <Categories />
-      <PopularProcedures />
-    </>
+
+    <main className="mx-auto max-w-6xl px-6">
+<HeroSearch
+  tramites={tramites}
+/>
+
+
+      <PopularTramites
+        tramites={tramites}
+      />
+
+
+      <CategoryList
+        categorias={categorias}
+      />
+
+    </main>
+
   );
+
 }
