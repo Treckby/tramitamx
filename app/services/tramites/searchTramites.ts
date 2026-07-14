@@ -24,8 +24,8 @@ export function searchTramites(
       .toLowerCase()
       .includes(text)
     ||
-    tramite.categoria
-      .toLowerCase()
-      .includes(text)
+   tramite.categoriaId
+  .toLowerCase()
+  .includes(text)
   );
 }

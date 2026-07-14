@@ -75,7 +75,7 @@ export default async function CategoriaPage({
   const tramites =
     getTramites().filter(
       (tramite) =>
-        tramite.categoria === categoria.nombre
+        tramite.categoriaId === categoria.id
     );
 
 

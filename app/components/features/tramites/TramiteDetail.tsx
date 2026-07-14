@@ -32,7 +32,7 @@ export default function TramiteDetail({
             href: "/tramites",
           },
           {
-            label: tramite.categoria,
+            label: "Categoría",
           },
           {
             label: tramite.titulo,

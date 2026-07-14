@@ -1,10 +1,26 @@
-import { curp } from "@/app/data/tramites/identidad/curp";
+import {
+  curp,
+  actaNacimiento,
+  rfc,
+} from "@/app/data/tramites/identidad";
+
 import type { Tramite } from "@/app/types";
 
-const tramites: Tramite[] = [curp];
+
+const tramites: Tramite[] = [
+  curp,
+  actaNacimiento,
+  rfc,
+];
+
 
 export function getTramiteBySlug(
   slug: string
 ): Tramite | undefined {
-  return tramites.find((tramite) => tramite.slug === slug);
+
+  return tramites.find(
+    (tramite) =>
+      tramite.slug === slug
+  );
+
 }

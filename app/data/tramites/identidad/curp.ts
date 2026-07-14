@@ -10,7 +10,7 @@ export const curp: Tramite = {
   descripcion:
     "Consulta, descarga e imprime tu Clave Única de Registro de Población (CURP) de forma gratuita.",
 
-  categoria: "Identidad",
+  categoriaId: "identidad",
 
   costo: "Gratuito",
 

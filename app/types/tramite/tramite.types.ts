@@ -5,7 +5,7 @@ export interface Tramite {
   titulo: string;
   descripcion: string;
 
-  categoria: string;
+  categoriaId: string;
 
   costo: string;
 
