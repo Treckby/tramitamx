@@ -1,5 +1,8 @@
 import { getTramites } from "@/app/services/tramites";
 import { TramiteGrid } from "@/app/components/features/tramites";
+import {
+  TramiteSearch,
+} from "@/app/components/features/tramites";
 
 export const metadata = {
   title: "Trámites en México",
@@ -29,7 +32,9 @@ export default function TramitesPage() {
 
       <div className="mt-10 grid gap-6 md:grid-cols-3">
 
-<TramiteGrid tramites={tramites}/>
+<TramiteSearch
+  tramites={tramites}
+/>
 
       </div>
 
