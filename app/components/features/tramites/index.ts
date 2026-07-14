@@ -1,7 +1,9 @@
+export { default as TramiteDetail } from "./TramiteDetail";
 export { default as TramiteHero } from "./TramiteHero";
 export { default as TramiteQuickInfo } from "./TramiteQuickInfo";
 export { default as TramiteRequirements } from "./TramiteRequirements";
 export { default as TramiteSteps } from "./TramiteSteps";
 export { default as TramiteFAQ } from "./TramiteFAQ";
 export { default as TramiteOfficialLinks } from "./TramiteOfficialLinks";
-export { default as TramiteRelated } from "./TramiteRelated";
+export { default as TramiteCard } from "./TramiteCard";
+export { default as TramiteGrid } from "./TramiteGrid";
