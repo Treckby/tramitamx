@@ -63,6 +63,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified:
         new Date(),
     },
+    {
+ url:
+ `${baseUrl}/tramites-mas-buscados`,
+
+ lastModified:
+ new Date(),
+},
 
 
     ...tramites,
