@@ -1,0 +1,1 @@
+export { default as CategoriaDetail } from "./CategoriaDetail";

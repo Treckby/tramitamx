@@ -1,0 +1,1 @@
+export { identidad } from "./identidad";
