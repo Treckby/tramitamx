@@ -9,3 +9,4 @@ export { default as TramiteCard } from "./TramiteCard";
 export { default as TramiteGrid } from "./TramiteGrid";
 export { default as TramiteSearch } from "./TramiteSearch";
 export { default as TramiteSearchBox } from "./TramiteSearchBox";
+export { default as RelatedTramites } from "./RelatedTramites";

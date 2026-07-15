@@ -1,8 +1,16 @@
-import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { TramiteDetail } from "@/app/components/features/tramites";
-import { getTramiteBySlug } from "@/app/services/tramites";
+
+import {
+  getTramiteBySlug,
+  getRelatedTramites,
+} from "@/app/services/tramites";
+
+
+import {
+  TramiteDetail,
+} from "@/app/components/features/tramites";
+
 
 
 type PageProps = {
@@ -12,54 +20,78 @@ type PageProps = {
 };
 
 
-export async function generateMetadata(
-  { params }: PageProps
-): Promise<Metadata> {
 
-  const { slug } = await params;
-
-  const tramite = getTramiteBySlug(slug);
-
-
-  if (!tramite) {
-    return {
-      title: "Trámite no encontrado",
-    };
-  }
-
-
-  return {
-    title: `${tramite.titulo} | TramitaMX`,
-
-    description: tramite.descripcion,
-
-    openGraph: {
-      title: `${tramite.titulo} | TramitaMX`,
-
-      description: tramite.descripcion,
-
-      type: "article",
-    },
-  };
-}
-
-
-export default async function TramitePage({
+export async function generateMetadata({
   params,
 }: PageProps) {
 
   const { slug } = await params;
 
 
-  const tramite = getTramiteBySlug(slug);
+  const tramite =
+    getTramiteBySlug(slug);
 
 
   if (!tramite) {
-    notFound();
+
+    return {
+      title: "Trámite no encontrado",
+    };
+
   }
 
 
+  return {
+
+    title:
+      `${tramite.titulo} | TramitaMX`,
+
+
+    description:
+      tramite.descripcion,
+
+  };
+
+}
+
+
+
+export default async function TramitePage({
+  params,
+}: PageProps) {
+
+
+  const { slug } = await params;
+
+
+  const tramite =
+    getTramiteBySlug(slug);
+
+
+
+  if (!tramite) {
+
+    notFound();
+
+  }
+
+
+
+  const relacionados =
+    getRelatedTramites(tramite);
+
+
+
   return (
-    <TramiteDetail tramite={tramite} />
+
+    <TramiteDetail
+
+      tramite={tramite}
+
+      relacionados={relacionados}
+
+    />
+
   );
+
 }
