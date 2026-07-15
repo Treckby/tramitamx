@@ -5,7 +5,9 @@ import {
   constanciaFiscal,
   nss,
 } from "@/app/data/tramites/identidad";
-
+import {
+  licenciaConducir,
+} from "@/app/data/tramites/vehiculos";
 import type { Tramite } from "@/app/types";
 
 
@@ -14,7 +16,9 @@ const tramites: Tramite[] = [
   actaNacimiento,
   rfc,
   constanciaFiscal,
-  nss
+  nss,
+  licenciaConducir
+
 ];
 
 
