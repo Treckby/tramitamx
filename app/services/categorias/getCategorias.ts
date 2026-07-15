@@ -1,18 +1,10 @@
 import {
-  identidad,
+  categorias,
 } from "@/app/data/categorias";
 
 
-import type {
-  Categoria,
-} from "@/app/types";
+export function getCategorias() {
 
-
-const categorias: Categoria[] = [
-  identidad,
-];
-
-
-export function getCategorias(): Categoria[] {
   return categorias;
+
 }
