@@ -1,5 +1,9 @@
-export { curp } from "./curp";
+export * from "./curp";
 
-export { actaNacimiento } from "./acta-nacimiento";
+export * from "./actaNacimiento";
 
-export { rfc } from "./rfc";
+export * from "./rfc";
+
+export * from "./constanciaFiscal";
+
+export * from "./nss";
