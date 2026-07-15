@@ -18,6 +18,26 @@ import {
 } from "./impuestos";
 
 
+import {
+  salud,
+} from "./salud";
+
+
+import {
+  educacion,
+} from "./educacion";
+
+
+import {
+  vivienda,
+} from "./vivienda";
+
+
+import {
+  viajes,
+} from "./viajes";
+
+
 
 export const categorias = [
 
@@ -28,5 +48,13 @@ export const categorias = [
   trabajo,
 
   impuestos,
+
+  salud,
+
+  educacion,
+
+  vivienda,
+
+  viajes,
 
 ];
